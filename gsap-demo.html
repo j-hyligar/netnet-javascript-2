@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>gsap demo</title>
+    <meta name="jayden hyligar" content="jayden hyligar">
+  </head>
+  <body>
+    
+  </body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+  /* global gsap */
+  function setup () {
+    // Create a box element
+    const box = document.createElement('div')
+    box.style.width = '75px'
+    box.style.height = '75px'
+    box.style.backgroundColor = '#77C7BF'
+    box.style.position = 'absolute'
+    box.style.top = '10px'
+    box.style.left = '10px'
+    document.body.appendChild(box)
+    
+    const box2= document.createElement('div')
+    box2.style.width = '25px'
+    box2.style.height = '25px'
+    box2.style.backgroundColor = '#C7604E'
+    box2.style.position = 'absolute'
+    box2.style.top = '800px'
+    box2.style.left = '800px'
+    document.body.appendChild(box2)
+
+    // Animate the box using GSAP
+    gsap.to(box, {
+      duration: 1,
+      x: 800,
+      y: 800,
+      rotation: 180,
+      scale: 0.5,
+      repeat: -1,
+      yoyo: true,
+      ease: 'power1.inOut'
+    })
+    
+    gsap.to(box2, {
+      duration: 1.5,
+      x: -800,
+      y: -800,
+      rotation: 360,
+      scale: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: 'power1.inOut'
+    })
+  }
+
+  window.addEventListener('load', setup)
+</script>

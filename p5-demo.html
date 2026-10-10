@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>p5 demo</title>
+    <meta name="jayden hyligar" content="jayden hyligar">
+  </head>
+  <body>
+    
+  </body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
+<script>
+  /* global p5 */
+  const sketch = (p) => {
+    p.setup = () => {
+      p.createCanvas(950, 400);
+      p.background("#FAF0EB");
+    }
+
+    p.draw = () => {
+      p.fill(p.random(100,256), p.random(100,256), p.random(100,256));
+      p.rect(p.mouseX, p.mouseY, 10, 30);
+    }
+  }
+  new p5(sketch);
+</script>
