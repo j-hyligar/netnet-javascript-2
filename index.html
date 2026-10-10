@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>netnet dynamic gif</title>
+  </head>
+  <body>
+    
+  </body>
+</html>
+
 <script src="nn.min.js"></script>
 <script>
   /* global nn */
@@ -25,7 +35,7 @@
         fontSize: 72
       })
     // run the createGif function 50 times
-    nn.times(15, createGif)
+    nn.times(5, createGif)
   }
   
   function createGif () {
@@ -36,13 +46,13 @@
     const c = nn.toHSL(frgrnd)
     // create an img element for our butterfly gif
     nn.create('img')
-      .set('src', 'butterfly.gif')
+      .set('src', 'bunny-bunny.gif')
       .addTo('body')
       .position(x, y)
       .rotate(r)
       .hueRotate(60 - c.h)
-      .saturate(c.s / 100)
-      .brightness(c.l / 100)
+      .saturate(c.s / 50)
+      .brightness(c.l / 50)
       .css({
         cursor: 'grab',
         userSelect: 'none',
